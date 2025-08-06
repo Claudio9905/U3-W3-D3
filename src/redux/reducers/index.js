@@ -15,6 +15,21 @@ const mainReducer = (state = initialState, action) => {
         },
       };
 
+    case "REMOVE_JOB_FAVOURITE":
+      return {
+        ...state,
+        favourites: {
+          ...state.favourites,
+          content: state.favourites.content.filter((job) => {
+            if (job._id === action.payload) {
+              return false;
+            } else {
+              return true;
+            }
+          }),
+        },
+      };
+
     default:
       return state;
   }

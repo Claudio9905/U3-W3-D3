@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Row, Col, Container } from "react-bootstrap";
 
@@ -8,6 +8,8 @@ const Favourites = () => {
   });
 
   console.log(jobs);
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -32,6 +34,17 @@ const Favourites = () => {
                         {job.category}-{job.job_type}
                       </p>
                     </div>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => {
+                        dispatch({
+                          type: "REMOVE_JOB_FAVOURITE",
+                          payload: job._id,
+                        });
+                      }}
+                    >
+                      Remove
+                    </button>
                   </ListGroup.Item>
                 );
               })}
