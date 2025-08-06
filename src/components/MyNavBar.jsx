@@ -11,14 +11,14 @@ const MyNavBar = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <div className="border border-1 border-dark rounded-3 shadow-lg">
+          <div className="border border-1 border-dark rounded-3 shadow-lg p-1">
             <Link to="/" className="text-decoration-none text-dark">
               Search-Jobs
             </Link>
           </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="ms-3">
               <Link to="/" className="text-decoration-none text-dark me-2">
                 Home
               </Link>

@@ -9,7 +9,9 @@ import MyNavBar from "./components/MyNavBar";
 function App() {
   return (
     <BrowserRouter>
-      <MyNavBar />
+      <header>
+        <MyNavBar />
+      </header>
       <Routes>
         <Route path="/" element={<MainSearch />} />
         <Route path="/:company" element={<CompanySearchResults />} />

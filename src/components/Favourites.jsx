@@ -13,8 +13,8 @@ const Favourites = () => {
 
   return (
     <>
-      <div className="mt-4 border border-3 border-danger-subtle rounded-3 w-25 text-center ms-3 bg-dark shadow-lg">
-        <h1 className="fs-1 text-light">Pagina Preferiti</h1>
+      <div className="mt-4 border border-3 border-danger-subtle rounded-3 w-50 text-center ms-3 bg-dark shadow-lg p-2">
+        <h1 className="fs-3 text-light">Pagina Preferiti</h1>
       </div>
       {/* aggiungo l'azienda che ho selezionate per inserirlo nella lista dei preferiti */}
       <Container>
